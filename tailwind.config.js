@@ -1,0 +1,35 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+        "./storage/framework/views/*.php",
+        "./resources/**/*.blade.php",
+        "./resources/**/*.tsx",
+        "./resources/**/*.vue",
+    ],
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+            },
+            animation:{
+                buttonSlide: "buttonSlide 0.5s linear"
+            },
+            keyframes:{
+                wiggle:{
+                    "0%":{
+                        width:"0"
+                    },
+                    "100%":{
+                        width:"5rem"
+                    },
+                },
+            },
+        },
+    },
+    plugins: [
+        require('tailwind-scrollbar'),
+    ],
+};

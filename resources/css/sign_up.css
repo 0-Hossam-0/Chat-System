@@ -1,0 +1,125 @@
+
+
+.header{
+    font-family: "Geist Mono", monospace;
+    font-size: 140px;
+    font-weight:bolder;
+    color: transparent;
+    -webkit-text-stroke: 2px #000;
+    background-image: linear-gradient(#fff, #6366f1);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -520px 0;
+    animation: backcolor 3s linear forwards;
+}
+
+
+@keyframes backcolor{
+    100%{
+        background-position: 0 0;
+    }
+}
+
+::selection{
+    color: black;
+    background: #6366f1;
+}
+
+
+.button {
+    position: relative;
+    z-index: 1; 
+    transition:1s;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    transition: left 0.5s linear; 
+}
+
+.button:hover::before {
+    left: 0; 
+}
+
+.back:hover{
+    color:black;
+    transition:1s;
+}
+
+
+/*                                                                                                                               */
+
+.register::before {
+    background-color: rgb(36, 160, 8);
+}
+.login::before {
+    background-color: #6366f1;
+}
+.next::before {
+    background-color: #6366f1;
+}
+
+/*                                                                                                                               */
+
+.back{
+    position: relative;
+    z-index: 1; 
+    transition:1s;
+}
+
+.back::before {
+    background-color: #85868c; 
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    transition: right 0.5s linear; 
+}
+
+
+
+.back:hover::before {
+    right: 0; 
+}
+
+
+.button:hover{
+    color:black;
+    transition:1s;
+}
+
+
+/*                                                                                                                               */
+
+.error{
+    animation:error 0.3s ease forwards;
+}
+
+
+@keyframes error{
+    0% { transform: rotate(0deg);}
+    10% { transform: rotate(-1deg); }
+    20% { transform: rotate(1deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-1deg); }
+    80% { transform: rotate(1deg); }
+    90% { transform: rotate(0deg); }
+}
+
+/*                                                                                                                               */
+
+.panel{
+    box-shadow:6px 4px 24px 3px ;
+}

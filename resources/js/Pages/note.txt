@@ -1,0 +1,12 @@
+1- remember me button
+2- Message time problem placement problem => 11:11 Pm
+3- Message Settings => Delete, Edit
+4- css files
+5- better code
+6- new register panel for email verify with captcha
+7- hover problem on profile icon and settings icon
+8- back to register panel after creating an account BUG
+9- make a new route for login and register
+10- send message button glitch after login
+11- make more files for the functions
+12- add the same user twice
