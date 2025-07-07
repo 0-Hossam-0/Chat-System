@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import { HTMLElements } from './Components/Hooks/HTMLElements';
-import { RegisterContextProps } from './Types/Interfaces';
+import type { RegisterContextProps } from './Types/Interfaces';
 import { States } from './Components/Hooks/States';
 
 const RegisterContext = createContext<RegisterContextProps | null>(null);

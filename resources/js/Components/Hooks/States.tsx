@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { InputsLevelProps, GetLoadingStateProps, MessageProps, NotificationProps, SetLoadingStateProps, UserDataProps, CurrentChatProps, UserChatsProps } from '../../Types/Interfaces';
+import type { InputsLevelProps, GetLoadingStateProps, NotificationProps, SetLoadingStateProps, UserChatsProps } from '../../Types/Interfaces';
 
 export const States = () => {
   const [showUsernameLoading, setUsernameLoading] = useState<boolean>(false);

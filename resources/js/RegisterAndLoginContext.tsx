@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import { RegisterAndLoginContextProps } from './Types/Interfaces';
+import type { RegisterAndLoginContextProps } from './Types/Interfaces';
 import { States } from './Components/Hooks/States';
 import { HTMLElements } from './Components/Hooks/HTMLElements';
 

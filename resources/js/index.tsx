@@ -7,6 +7,7 @@ import LoadingLayOut from './Components/LoadingLayOut';
 import Notification from './Components/Notification';
 import { RegisterAndLoginProvider } from './RegisterAndLoginContext';
 import { HomeContextProvider } from './HomeContext';
+import '../css/app.css';
 
 createInertiaApp({
   resolve: (name) => {

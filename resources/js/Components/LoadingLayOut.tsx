@@ -1,7 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import type { RootState } from '../Redux/StoreApp';
+
 const LoadingLayOut: React.FC = () => {
-  const {show} = useSelector((state) => state.LoadingLayout)
+  const { show } = useSelector((state: RootState) => state.LoadingLayout);
   return (
     show && (
       <>

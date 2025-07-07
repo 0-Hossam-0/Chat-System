@@ -1,5 +1,5 @@
-import { AddChatUserProps, HandleInputsLevelProps, HandleOpeningErrorProps, ResetRegisterPanelProps, SearchChatsProps, SelectCurrentChatProps, SendCodeProps, SendsMessageProps } from '../Types/Interfaces';
-import { UserDataProps, UserChatsProps, MessageProps, MessageUsersProps, SwitchPanelsProps } from '../Types/Interfaces';
+import type { AddChatUserProps, HandleInputsLevelProps, HandleOpeningErrorProps, ResetRegisterPanelProps, SearchChatsProps, SelectCurrentChatProps, SendCodeProps, SendsMessageProps } from '../Types/Interfaces';
+import type { UserDataProps, UserChatsProps, MessageProps, MessageUsersProps, SwitchPanelsProps } from '../Types/Interfaces';
 import { setNotification } from '../Redux/NotificationSlice';
 import { firstValidation, secondValidation } from './Validation';
 import { removeLoadingState, showLoadingState } from '../Redux/LoadingSlice';

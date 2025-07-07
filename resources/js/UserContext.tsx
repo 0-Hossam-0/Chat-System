@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { transformUserData } from './Functions/Functions';
-import { UserDataProps, UserContextProps } from './Types/Interfaces';
+import type { UserDataProps, UserContextProps } from './Types/Interfaces';
 import { useRegisterAndLoginContext } from './RegisterAndLoginContext';
 const AppContext = createContext<UserContextProps | null>(null);
 

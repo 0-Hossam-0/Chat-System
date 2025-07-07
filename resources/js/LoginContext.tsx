@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
-import { LoginContextProps } from './Types/Interfaces';
+import { createContext, useContext, useState } from 'react';
+import type { LoginContextProps } from './Types/Interfaces';
 import { HTMLElements } from './Components/Hooks/HTMLElements';
 
 const LoginContext = createContext<LoginContextProps | null>(null);

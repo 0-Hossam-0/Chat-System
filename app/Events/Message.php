@@ -2,15 +2,12 @@
 
 namespace App\Events;
 
-use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PrivateChannel;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class Message implements ShouldBroadcastNow
+class Message
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels;
+    use Dispatchable, SerializesModels;
     public string $body;
     public string $chatID;
     /**
@@ -20,21 +17,5 @@ class Message implements ShouldBroadcastNow
     {
         $this->body = $body;
         $this->chatID = $chatID;
-    }
-
-    /**
-     * Get the channels the event should broadcast on.
-     *
-     * @return array<int, \Illuminate\Broadcasting\Channel>
-     */
-    public function broadcastOn(): array
-    {
-        return [
-            new PrivateChannel('Chat.User.'. $this->chatID),
-        ];
-    }
-    public function broadcastAs()
-    {
-        return 'Message';
     }
 }

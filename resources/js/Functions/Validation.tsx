@@ -1,4 +1,4 @@
-import { FirstValidationProps, LoginValidationProps, SecondValidationProps } from '../Types/Interfaces';
+import type { FirstValidationProps, LoginValidationProps, SecondValidationProps } from '../Types/Interfaces';
 import { router } from '@inertiajs/react';
 const firstInputsJson = {
   firstName: false,

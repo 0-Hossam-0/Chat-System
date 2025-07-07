@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Broadcast;
-
 /*
 |--------------------------------------------------------------------------
 | Broadcast Channels
@@ -20,7 +18,7 @@ use Illuminate\Support\Facades\Broadcast;
 //     // return (int) $user->id === (int) $userId;
 
 // });
-Broadcast::channel('Chat.User.{userId}', function ($user, $userId) {
-return true;
-    // return (string) $user->id === (string) $userId;
-});
+// Broadcast::channel('Chat.User.{userId}', function ($user, $userId) {
+// return true;
+//     // return (string) $user->id === (string) $userId;
+// });

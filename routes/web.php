@@ -7,7 +7,7 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-Route::middleware(['auth:sanctum'])->group(function () {
+Route::middleware(['verify.token'])->group(function () {
     Route::get('/', function () {
         return Inertia::render('Home');
 
@@ -15,22 +15,14 @@ Route::middleware(['auth:sanctum'])->group(function () {
 });
 
 Route::get('/register', [RegisterController::class, 'register'])->name('login');
-Route::post('/broadcaster/auth', function (Request $request) {
-    if (!Auth::guard('sanctum')->check()) {
-        return response()->json(['error' => 'Unauthorized'], 401);
-    }
-    return Broadcast::auth($request);
-})->middleware(['auth:sanctum']);
-
 
 
 Route::get('/checkToken', function (Request $request) {
     $userService = new UserService;
     $user = $userService->getUser($request);
-    Auth::guard('web')->login($user);
-    return "Done";
+    return Auth::guard('web')->login($user);
+    
 });
-Route::get('/test', function (Request $request) {
-    return Auth::check();
 
-});
+
+

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'default' => env('BROADCAST_DRIVER', 'database'),
+    'default' => env('BROADCAST_DRIVER', 'null'),
 
     'connections' => [
         'pusher' => [
@@ -17,6 +17,11 @@ return [
 
         'redis' => [
             'driver' => 'redis',
+            'connection' => 'default',
+        ],
+
+        'database' => [
+            'driver' => 'database',
             'connection' => 'default',
         ],
 

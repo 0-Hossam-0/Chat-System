@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { UserDataProps } from '../Types/Interfaces';
+import type { UserDataProps } from '../Types/Interfaces';
 import { removeLoadingState, showLoadingState } from './LoadingSlice';
 
 const initialState: { data: UserDataProps | null; error: string | null; loading: boolean } = {

@@ -1,17 +1,17 @@
 import React from "react";
-import { MessageComponent } from "../Types/Interfaces";
+import type { MessageComponent } from "../Types/Interfaces";
 
-const SenderMessage: React.FC<MessageComponent> = ({body, sendTime}) => {
+const ReceiverMessage: React.FC<MessageComponent> = ({body, sendTime}) => {
     return (
-        <div className="flex w-full">
-            <div className="flex justify-start mt-10 received ml-auto mr-5 float-right">
-                <div className="bg-[#3e37bd] text-white rounded-lg p-3 max-w-xs relative message-arrow">
-                    <div className="mt-1 break-words">{body}</div>
-                    <div className="text-xs text-gray-400 mt-1">{sendTime}</div>
+        <div className="flex justify-end">
+            <div className="flex flex-col items-end max-w-[80%]">
+                <div className="bg-indigo-500 text-white rounded-2xl rounded-tr-md px-4 py-3 shadow-sm">
+                    <p className="text-sm leading-relaxed break-words">{body}</p>
                 </div>
+                <span className="text-xs text-gray-500 dark:text-gray-400 mt-1 mr-2">{sendTime}</span>
             </div>
         </div>
     );
 };
 
-export default SenderMessage;
+export default ReceiverMessage;

@@ -6,17 +6,19 @@ import LoadingLayOut from './Components/LoadingLayOut';
 import Notification from './Components/Notification';
 import { RegisterAndLoginProvider } from './RegisterAndLoginContext';
 import { HomeContextProvider } from './HomeContext';
-import RegisterAndLogin from './Pages/RegisterAndLogin';
-import Home from './Pages/Home'; 
-import React from 'react';
+import RegisterAndLogin from './Pages/RegisterAndLogin'; // Import your actual auth component
+import Home from './Pages/Home'; // Import your actual home component
 
+// Create main App component
 function App() {
   return (
     <BrowserRouter>
+      {/* Global components */}
       <LoadingLayOut />
       <Notification />
 
       <Routes>
+        {/* Auth routes wrapped in RegisterAndLoginProvider */}
         <Route
           path="/register"
           element={
@@ -26,6 +28,7 @@ function App() {
           }
         />
 
+        {/* All other routes wrapped in HomeContextProvider */}
         <Route
           path="/*"
           element={
@@ -39,6 +42,7 @@ function App() {
   );
 }
 
+// Render the application
 const container = document.getElementById('root');
 if (container) {
   const root = createRoot(container);

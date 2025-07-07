@@ -1,5 +1,5 @@
-import { Dispatch, UnknownAction } from '@reduxjs/toolkit';
-import { HomeDispatch } from '../Redux/StoreApp';
+import type { Dispatch, UnknownAction } from '@reduxjs/toolkit';
+import type { HomeDispatch } from '../Redux/StoreApp';
 import type { Router } from '@inertiajs/core';
 
 export interface PanelsProps {

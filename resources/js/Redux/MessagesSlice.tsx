@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { MessageProps } from '../Types/Interfaces';
-import { RootState } from './StoreApp';
+import type { MessageProps } from '../Types/Interfaces';
+import type { RootState } from './StoreApp';
 
 const initialState = {
   messages: [] as MessageProps[],

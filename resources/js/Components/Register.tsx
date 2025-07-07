@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '/resources/css/sign_up.css';
+import '../../css/sign_up.css';
 import FirstInputs from './FirstInputs';
 import SecondInputs from './SecondInputs';
 import ThirdInputs from './ThirdInputs';

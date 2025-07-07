@@ -1,5 +1,5 @@
-import React, { createContext, useContext } from 'react';
-import { HomeContextProps } from './Types/Interfaces';
+import { createContext, useContext } from 'react';
+import type { HomeContextProps } from './Types/Interfaces';
 import { States } from './Components/Hooks/States';
 import { HTMLElements } from './Components/Hooks/HTMLElements';
 

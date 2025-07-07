@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
+import type { RootState } from '../Redux/StoreApp';
 
 const Notification: React.FC = ({}) => {
   const notification = useRef<HTMLInputElement | null>(null);
-  const { show, message, type } = useSelector((state) => state.Notification);
+  const { show, message, type } = useSelector((state: RootState) => state.Notification);
 
   useEffect(() => {
     if (show) {
