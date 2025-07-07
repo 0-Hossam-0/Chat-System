@@ -63,6 +63,7 @@ class ChatSystemController extends Controller
     }
     public function getUser(Request $request)
     {
+        // return "here";
         $user = Users::where('username', $request->get('username'))->first();
         $uuid = Str::uuid();
         if (isset($user)) {

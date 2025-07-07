@@ -7,7 +7,7 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-Route::middleware(['auth:sanctum'])->group(function () {
+Route::middleware(['verify.token'])->group(function () {
     Route::get('/', function () {
         return Inertia::render('Home');
 

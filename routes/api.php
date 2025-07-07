@@ -12,12 +12,12 @@ Route::post("/check-input", [RegisterController::class, 'checkInputs']);
 Route::post('register', [RegisterController::class, 'store']);
 Route::post('login', [LoginController::class, 'login']);
 
-Route::middleware('auth:sanctum')->group(function () {
-    Route::post('user', [ChatSystemController::class, 'getUser']);
+Route::middleware('verify.token')->group(function () {
     Route::get('/contacts', [ChatSystemController::class, 'getContacts']);
     Route::get('/messages/{id}', [ChatSystemController::class, 'getMessages']);
     Route::post('/message', [ChatController::class, 'message']);
 });
+Route::post('user', [ChatSystemController::class, 'getUser']);
 
 
 

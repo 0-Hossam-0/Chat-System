@@ -16,6 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->encryptCookies(['auth_token']);
         $middleware->alias([
+            'verify.token' => VerifyToken::class,
             'verify.last_activity' => VerifyLastActivity::class,
             // 'verify_token' => VerifyToken::class
 

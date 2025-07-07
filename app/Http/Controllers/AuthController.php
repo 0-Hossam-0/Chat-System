@@ -4,28 +4,26 @@ namespace App\Http\Controllers;
 
 use App\Mail\VerifyMail;
 use App\Models\Users;
-// use Cache;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Mail;
 use Str;
-use Symfony\Component\HttpFoundation\Response;
 
 class AuthController extends Controller
 {
 
     public function user(Request $request)
     {
-        // $token = $request->cookie('auth_token');f
-        // $request->headers->set('Authorization','Bearer '.$token);
+        $token = $request->cookie('auth_token');
+        $request->headers->set('Authorization','Bearer ' . $token);
         return Auth::user();
     }
 
     public function logout()
     {
-        $cookie = Cookie::forget('jwt');
+        $cookie = Cookie::forget('auth_token');
 
         return response([
             'message' => 'Success'

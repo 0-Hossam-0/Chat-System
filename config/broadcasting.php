@@ -1,16 +1,16 @@
 <?php
 
 return [
-    'default' => env('BROADCAST_DRIVER', 'database'),
+    'default' => env('BROADCAST_DRIVER', 'null'),
 
     'connections' => [
         'pusher' => [
             'driver' => 'pusher',
-            'key' => env('PUSHER_APP_KEY'),
-            'secret' => env('PUSHER_APP_SECRET'),
-            'app_id' => env('PUSHER_APP_ID'),
+            'key' => env('1928059'),
+            'secret' => env('844646c54555a2cecd6f'),
+            'app_id' => env('1928059'),
             'options' => [
-                'cluster' => env('PUSHER_APP_CLUSTER'),
+                'cluster' => env('eu'),
                 'useTLS' => false,
             ],
         ],

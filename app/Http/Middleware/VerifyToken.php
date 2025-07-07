@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Auth;
 use Closure;
 use Illuminate\Http\Request;
-use Laravel\Sanctum\Sanctum;
+use Laravel\Sanctum\PersonalAccessToken;
 use Symfony\Component\HttpFoundation\Response;
 
 class VerifyToken
@@ -17,13 +17,13 @@ class VerifyToken
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $token = $request->bearerToken();
+        $token = $request->cookie('auth_token');
+
         if ($token) {
-            $model = Sanctum::$personalAccessTokenModel;
-            $accessToken = $model::findToken($token);
+            $accessToken = PersonalAccessToken::find($token);
             if ($accessToken) {
                 $user = $accessToken->tokenable;
-                Auth::login($user);
+                Auth::guard('web')->login($user);
                 return $next($request);
             }
         }

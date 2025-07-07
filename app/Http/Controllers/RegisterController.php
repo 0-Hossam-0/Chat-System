@@ -74,7 +74,7 @@ class RegisterController extends Controller
 
         $cookieToken = $request->cookie('auth_token');
         if (isset($cookieToken)) {
-            $token = PersonalAccessToken::find($cookieToken);
+            $token = Users::find($cookieToken);
             if (isset($token)) {
                 return redirect(route('home'));
             }
